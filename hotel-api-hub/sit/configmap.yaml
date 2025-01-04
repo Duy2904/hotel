@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hotel-api-hub-configmap-sit
+  namespace: sit
+data:
+  AllowedHosts: "*"
+  EncryptionSettings__Key: "1QG5uJ5t8N4jEUDFppOTiUyeaGIaXZaopas0fCXEi1E="
+  EncryptionSettings__IV: "xY/2/qDTB0Y9HX6QSr1Gxw=="
+  ApplicationInsights__ConnectionString: "InstrumentationKey=a249a91e-59ad-4b15-95f7-8006885916ff;IngestionEndpoint=https://southeastasia-1.in.applicationinsights.azure.com/;LiveEndpoint=https://southeastasia.livediagnostics.monitor.azure.com/;ApplicationId=4dcdb9ba-7748-4de6-8274-2048ae968349"
+  AMADEUS__SecurityHeader__Action: "http://webservices.amadeus.com"
+  AMADEUS__SecurityHeader__Url: "https://noded2.test.webservices.amadeus.com"
+  AMADEUS__SecurityHeader__Swap: "1ASIWAPIHNNU"
+  AMADEUS__SecurityHeader__UserName: "WSHNNAPI"
+  AMADEUS__SecurityHeader__Password: "Amadeus1"
+  AMADEUS__SecurityHostedUser__AgentDutyCode: "SU"
+  AMADEUS__SecurityHostedUser__POS_Type: "1"
+  AMADEUS__SecurityHostedUser__RequestorType: "U"
+  AMADEUS__SecurityHostedUser__PseudoCityCode: "SGNVM28BT"
+  AgodaApiSettings__AffiliateApiBaseUrl: "http://sandbox-affiliateapi.agoda.com"
+  AgodaApiSettings__ContentApiBaseUrl: "http://affiliatefeed.agoda.com"
+  AgodaApiSettings__AffiliateApiServicesBaseUrl: "http://sandbox-affiliateapiservices.agoda.com"
+  AgodaApiSettings__AffiliateApiSecureBaseUrl: "https://sandbox-affiliateapisecure.agoda.com"
+  AgodaApiSettings__SiteId: "1826002"
+  AgodaApiSettings__ApiKey: "3D50E9FD-51A8-4421-9830-91211B339E54"
+  AgodaApiSettings__Token: "41d30c7725358ac8bb464ce909bbcfff"
+  AgodaApiSettings__Config__AllowDuplication: "true"
+  AgodaApiSettings__Config__WaitTimeDefault: "30"
+  AgodaApiSettings__Config__WaitTimePreCheck: "60"
+  AgodaApiSettings__Config__WaitTimeBook: "120"
+  AgodaApiSettings__Config__CreditCardInfo__CardType: "MasterCard"
+  AgodaApiSettings__Config__CreditCardInfo__Number: "5212345678901234"
+  AgodaApiSettings__Config__CreditCardInfo__ExpiryDate: "082026"
+  AgodaApiSettings__Config__CreditCardInfo__Cvc: "737"
+  AgodaApiSettings__Config__CreditCardInfo__HolderName: "QA"
+  AgodaApiSettings__Config__CreditCardInfo__CountryOfIssue: "TH"
+  AgodaApiSettings__Config__CreditCardInfo__IssuingBank: "Bank"
+
+
+

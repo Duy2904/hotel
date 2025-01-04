@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hotel-api-hub
+  name: hotel-api-hub
+  namespace: sit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hotel-api-hub
+  template:
+    metadata:
+      labels:
+        app: hotel-api-hub
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: hotel-api-hub-configmap-sit
+        image: tripotadevacr.azurecr.io/hotel-api-hub:1716506
+        imagePullPolicy: Always
+        name: hotel-api-hub
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            memory: 512Mi
+          requests:
+            memory: 512Mi
+      imagePullSecrets:
+      - name: tripota-acr-secret
