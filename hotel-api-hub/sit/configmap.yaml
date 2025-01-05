@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: flight-api-hub-configmap-dev
-  namespace: development
+  namespace: sit
 data:
   AllowedHosts: "*"
   EncryptionSettings__Key: "1QG5uJ5t8N4jEUDFppOTiUyeaGIaXZaopas0fCXEi1E="
