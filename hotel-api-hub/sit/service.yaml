@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hotel-api-hub-svc
-  namespace: sit
+  name: flight-api-hub-svc
+  namespace: development
 spec:
   selector:
-    app: hotel-api-hub
+    app: flight-api-hub
   ports:
     - name: http
       protocol: TCP
