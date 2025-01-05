@@ -4,7 +4,7 @@ metadata:
   labels:
     app: flight-api-hub
   name: flight-api-hub
-  namespace: development
+  namespace: sit
 spec:
   replicas: 1
   selector:
