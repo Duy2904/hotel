@@ -5,9 +5,9 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-production
     kubernetes.io/ingress.class: traefik
   labels:
-    app: hotel-api-hub
-  name: hotel-api-hub
-  namespace: sit
+    app: flight-api-hub
+  name: flight-api-hub
+  namespace: development
 spec:
   rules:
   - host: duy.com
@@ -15,13 +15,12 @@ spec:
       paths:
       - backend:
           service:
-            name: hotel-api-hub-svc
-            port:
+            name: flight-api-hub-svc
+            port: 
               number: 8080
         path: /
-        pathType: Prefix
+        pathType: Prefix  
   tls:
   - hosts:
-    #- hotel-api-hub-sit1.tripota.com.vn
     - duy.com
-    secretName: hotel-api-hub-tls
+    secretName: flight-api-hub-tls
