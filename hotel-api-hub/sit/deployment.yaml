@@ -2,32 +2,33 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: hotel-api-hub
-  name: hotel-api-hub
-  namespace: sit
+    app: flight-api-hub
+  name: flight-api-hub
+  namespace: development
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hotel-api-hub
+      app: flight-api-hub
   template:
     metadata:
       labels:
-        app: hotel-api-hub
+        app: flight-api-hub
     spec:
       containers:
       - envFrom:
         - configMapRef:
-            name: hotel-api-hub-configmap-sit
-        image: tripotadevacr.azurecr.io/hotel-api-hub:16506
+            name: flight-api-hub-configmap-dev
+        image: tripotadevacr.azurecr.io/flight-api-hub:17561
         imagePullPolicy: Always
-        name: hotel-api-hub
+        name: flight-api-hub
         ports:
-        - containerPort: 8080
+        - containerPort: 808
         resources:
           limits:
-            memory: 512Mi
+            memory: 1500Mi
           requests:
-            memory: 512Mi
+            memory: 1500Mi
       imagePullSecrets:
       - name: tripota-acr-secret
+      #nodeName: tripota-vm-dev-02
