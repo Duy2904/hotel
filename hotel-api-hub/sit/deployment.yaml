@@ -2,33 +2,41 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: flight-api-hub
-  name: flight-api-hub
-  namespace: sit
+    app: masterv2-api-dev
+  name: masterv2-api-dev
+  namespace: development
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flight-api-hub
+      app: masterv2-api-dev
   template:
     metadata:
       labels:
-        app: flight-api-hub
+        app: masterv2-api-dev
     spec:
       containers:
-      - envFrom:
-        - configMapRef:
-            name: flight-api-hub-configmap-dev
-        image: tripotadevacr.azurecr.io/flight-api-hub:17561
+      - #envFrom:
+        - #configMapRef:
+            #name: masterv2-api-configmap-dev
+      - name : masterv2-api-dev
+        image: tripotadevacr.azurecr.io/masterv2-api:19185
         imagePullPolicy: Always
-        name: flight-api-hub
+        #name: masterv2-api-dev
         ports:
-        - containerPort: 808
+        - containerPort: 8080
+        volumeMounts:
+        - name: config-volume
+          mountPath: /api/server/Configurations/database.json
+          subPath: database.json
+        volumes:
+        - name: config-volume
+          configmap: masterv2-api-dev
         resources:
           limits:
-            memory: 1500Mi
+            memory: 1024Mi
           requests:
-            memory: 1500Mi
+            memory: 1024Mi
       imagePullSecrets:
       - name: tripota-acr-secret
-      #nodeName: tripota-vm-dev-02
+      #nodeName: trip-ota-vm-dev-01
