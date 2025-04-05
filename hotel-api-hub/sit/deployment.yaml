@@ -58,7 +58,7 @@ spec:
       - envFrom:
         - configMapRef:
             name: masterv2-api-configmap-dev
-        image: tripotadevacr.azurecr.io/master-api:19165
+        image: tripotadevacr.azurecr.io/masterv2-api:19189
         imagePullPolicy: Always
         name: masterv2-api-dev
         ports:
