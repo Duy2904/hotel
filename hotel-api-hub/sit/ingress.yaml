@@ -5,22 +5,22 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-production
     kubernetes.io/ingress.class: traefik
   labels:
-    app: flight-api-hub
-  name: flight-api-hub
+    app: masterv2-api-dev
+  name: masterv2-api-dev
   namespace: sit
 spec:
   rules:
-  - host: duy.com
+  - host: masterv2-api-dev.tripota.com.vn
     http:
       paths:
       - backend:
           service:
-            name: flight-api-hub-svc
+            name: masterv2-api-dev-svc
             port: 
               number: 8080
         path: /
         pathType: Prefix  
   tls:
   - hosts:
-    - duy.com
-    secretName: flight-api-hub-tls
+    - masterv2-api-dev.tripota.com.vn
+    secretName: masterv2-api-dev-tls
