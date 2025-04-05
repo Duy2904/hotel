@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: masterv2-api-dev
+  #labels:
+    #app: masterv2-api-dev
   name: masterv2-api-dev
   namespace: sit
 spec:
