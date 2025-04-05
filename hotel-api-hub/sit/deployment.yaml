@@ -31,7 +31,7 @@ spec:
           subPath: database.json
         volumes:
         - name: config-volume
-          configmap: masterv2-api-dev
+          configmap: masterv2-api-configmap-dev
         resources:
           limits:
             memory: 1024Mi
