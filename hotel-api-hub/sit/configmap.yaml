@@ -1,8 +1,8 @@
-# apiVersion: v1
-# kind: ConfigMap
-# metadata:
-#   name: masterv2-api-configmap-dev
-#   namespace: sit
-# data:
-#   database.json: {"DatabaseSettings__ConnectionString": "Server=172.188.49.222;Database=tripota_masterdata_dev;Port=5432;User Id=tripota_masterdata_dev;Password=TripOta@186;"}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: masterv2-api-configmap-dev
+  namespace: sit
+data:
+  database.json: {"DatabaseSettings__ConnectionString": "Server=172.188.49.222;Database=tripota_masterdata_dev;Port=5432;User Id=tripota_masterdata_dev;Password=TripOta@186;"}
   
