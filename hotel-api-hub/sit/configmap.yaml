@@ -13,4 +13,4 @@ metadata:
   namespace: sit
 data:
    DatabaseOptions__Provider: "postgresql"
-   DatabaseOptions__ConnectionString: "Host=172.188.49.222;Database=tripota_masterdata_dev;Port=5432;Username=tripota_masterdata_dev;Password=TripOta@186;Persist Security Info=True;s"
+   DatabaseOptions__ConnectionString: "Host=172.188.49.222;Database=tripota_masterdata_dev;Port=5432;Username=postgresql;Password=TripOta@186;Persist Security Info=True;"
