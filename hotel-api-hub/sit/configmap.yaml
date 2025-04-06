@@ -12,31 +12,5 @@ metadata:
   name: masterv2-api-configmap-dev
   namespace: sit
 data:
-  DatabaseOptions__Provider: "postgresql"
-  DatabaseOptions__ConnectionString: "Host=172.188.49.222;Database=tripota_masterdata_dev;Port=5432;Username=tripota_masterdata_dev;Password=TripOta@186;Persist Security Info=True;"
-  ElasticsearchSettings__Url: "https://172.188.49.222:9200"
-  ElasticsearchSettings__Username: "elastic"
-  ElasticsearchSettings__Password: "lrUEPETqP_muoJsMD9tt"
-  ElasticsearchSettings__Fingerprint: "f97ef87e8d1a6e04827b4ed362150680d1d2339902b7eeaa64d51860b407017b"
-  Serilog__WriteTo__1__Args__connectionString: "InstrumentationKey=9f32a415-f403-4731-919d-d6969827a4bc"
-  ApplicationInsights__ConnectionString: "InstrumentationKey=9f32a415-f403-4731-919d-d6969827a4bc"    
-  TripOtaBlobStorage__BaseUri: "https://tripotastoragedev.blob.core.windows.net"
-  HotelApiSettings__ApiKey: "xPf110QBAU625frdDL831Q=="
-  HotelApiSettings__BaseUrl: "https://hotel-api-hub-dev.tripota.com.vn"
-  HotelApiSettings__AvailabilityUrl: "api/v1/hotel/availability"
-  HotelApiSettings__DataFeed__RegionUrl: "api/v1/data-feed/{0}/regions"
-  HotelApiSettings__DataFeed__CountryUrl: "api/v1/data-feed/{0}/countries"
-  HotelApiSettings__DataFeed__CityUrl: "api/v1/data-feed/{0}/country/{1}/cities"
-  HotelApiSettings__DataFeed__AreaUrl: "api/v1/data-feed/{0}/city/{1}/areas"
-  HotelApiSettings__DataFeed__ProvinceUrl: "api/v1/data-feed/{0}/country/{1}/provinces"
-  HotelApiSettings__DataFeed__HotelsUrl: "api/v1/data-feed/{0}/city/{1}/accommodations"
-  HotelApiSettings__DataFeed__HotelFullUrl: "api/v1/data-feed/{0}/accommodation/{1}"
-  HotelApiSettings__DataFeed__HotelChangeUrl: "api/v1/data-feed/{0}/accommodation/changed/{1}/type/{2}"
-  CorsSettings__Angular: "http://localhost:5173;http://localhost:4200;https://flighthub-react-dev.tripota.com.vn;https://flighthub-react-prod.tripota.com.vn"
-  CorsSettings__Blazor: "http://localhost:5173;https://localhost:44375;https://flighthub-react-dev.tripota.com.vn;https://flighthub-react-prod.tripota.com.vn"
-  CorsSettings__React: "http://localhost:3000;http://localhost:5173;https://flighthub-react-dev.tripota.com.vn;https://flighthub-react-prod.tripota.com.vn"
-  ElasticsearchSettings__AccommodationsIndexName: "dev_ta_accommodations"
-  ElasticsearchSettings__SearchingAccommodationsIndexName: "dev_searching_accommodations"
-  ElasticsearchSettings__GeographicalEntitiesIndexName: "dev_geographical_entities_suggestion"
-  ElasticsearchSettings__AirportIndexName: "dev_airports"
-   
+ 
+  
