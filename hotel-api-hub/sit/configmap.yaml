@@ -13,7 +13,7 @@ metadata:
   namespace: sit
 data:
   DatabaseOptions__Provider: "postgresql"
-  DatabaseOptions__ConnectionString: "Host=172.188.49.222;Database=tripota_masterdata_dev;Port=5432;Username=postgres;Password=TripOta@186;Persist Security Info=True;"
+  DatabaseOptions__ConnectionString: "Host=172.188.49.222;Database=tripota_masterdata_dev;Port=5432;Username=tripota_masterdata_dev;Password=TripOta@186;Persist Security Info=True;"
   ElasticsearchSettings__Url: "https://172.188.49.222:9200"
   ElasticsearchSettings__Username: "elastic"
   ElasticsearchSettings__Password: "lrUEPETqP_muoJsMD9tt"
