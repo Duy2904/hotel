@@ -58,7 +58,7 @@ spec:
       - envFrom:
         - configMapRef:
             name: masterv2-api-configmap-dev
-        image: tripotadevacr.azurecr.io/masterv2-api:19189
+        image: tripotadevacr.azurecr.io/master-api:
         imagePullPolicy: Always
         name: masterv2-api-dev
         ports:
@@ -68,6 +68,14 @@ spec:
             memory: 1024Mi
           requests:
             memory: 1024Mi
+        volumeMounts:
+            - name: appdata
+              mountPath: /app/App_Data/Tenants
+      volumes:
+        - name: appdata
+          hostPath:
+            path: /home/devops/docker  # Thư mục trên host chứa dữ liệu Tenants
+            type: DirectoryOrCreate
       imagePullSecrets:
       - name: tripota-acr-secret
       
