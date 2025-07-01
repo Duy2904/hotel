@@ -10,7 +10,7 @@ metadata:
   namespace: sit
 spec:
   rules:
-  - host: masterv2-api-dev.tripota.com.vn
+  - host: check.tripota.com.vn
     http:
       paths:
       - backend:
