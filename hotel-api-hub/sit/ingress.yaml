@@ -22,5 +22,5 @@ spec:
         pathType: Prefix  
   tls:
   - hosts:
-    - masterv2-api-dev.tripota.com.vn
+    - check.tripota.com.vn
     secretName: masterv2-api-dev-tls
